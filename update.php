@@ -4,7 +4,7 @@
  */
 
 $sources = [
-    "playlist.m3u" => "https://yowaimo.in/StreamFlexTv/master.php?name=SF9EEJVS&token=165561166922b8141128e14f",
+    "playlist.m3u" => "https://server.lrl45.workers.dev/channel/raw?=m3u",
 ];
 
 foreach ($sources as $fileName => $url) {
