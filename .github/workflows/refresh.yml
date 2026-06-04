@@ -1,9 +1,9 @@
-name: Hourly Playlist Update
+name: Hourly Stealth Fetch
 
 on:
   schedule:
-    - cron: '0 * * * *'  # Runs exactly at the start of every hour
-  workflow_dispatch:      # Allows you to click "Run workflow" manually
+    - cron: '0 * * * *'
+  workflow_dispatch:
 
 jobs:
   build:
@@ -19,15 +19,13 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: '8.1'
-          extensions: curl
 
-      - name: Fetch Playlists
+      - name: Fetch Playlist
         run: php update.php
 
-      - name: Commit and Push Changes
+      - name: Commit and Push
         run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
           git add .
-          # This line checks if there are changes. If no changes, it won't error out.
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Hourly Update: $(date +'%Y-%m-%d %H:%M:%S')" && git push)
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Update Playlist $(date)" && git push)
