@@ -1,18 +1,14 @@
 <?php
 /**
- * CartelFetch - Enhanced M3U Fetcher
+ * CartelFetch - Enhanced Stealth M3U Fetcher
  */
 
 $sources = [
-    "playlist.m3u"   => "https://yowaimo.in/StreamFlexTv/master.php?name=SF9EEJVS&token=165561166922b8141128e14f",
-    // Add more sources here
+    "playlist.m3u" => "https://yowaimo.in/StreamFlexTv/master.php?name=SF9EEJVS&token=165561166922b8141128e14f",
 ];
 
-// Create a temp cookie file for session-based panels
-$cookieFile = tempnam(sys_get_temp_dir(), 'cookies');
-
 foreach ($sources as $fileName => $url) {
-    echo "[*] Processing: $fileName\n";
+    echo "[*] Fetching: $fileName\n";
 
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $url);
@@ -20,50 +16,43 @@ foreach ($sources as $fileName => $url) {
     curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
     curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
-    curl_setopt($ch, CURLOPT_TIMEOUT, 60); // Increased timeout
-    curl_setopt($ch, CURLOPT_ENCODING, ""); // Handle compressed responses
+    curl_setopt($ch, CURLOPT_TIMEOUT, 120); // Longer timeout for large lists
     
-    // Maintain cookies for redirects
-    curl_setopt($ch, CURLOPT_COOKIEJAR, $cookieFile);
-    curl_setopt($ch, CURLOPT_COOKIEFILE, $cookieFile);
+    // CRITICAL: This handles the GZIP compression many panels use
+    curl_setopt($ch, CURLOPT_ENCODING, ""); 
 
-    // Advanced Headers to mimic a real IPTV app
-    curl_setopt($ch, CURLOPT_USERAGENT, 'OTTNavigator/1.6.5.1 (Linux;Android 11) ExoPlayerLib/2.14.2');
-    curl_setopt($ch, CURLOPT_HTTPHEADER, [
+    // CRITICAL: Mimicking a premium OTT Navigator app exactly
+    $headers = [
+        'User-Agent: OTTNavigator/1.7.1.2 (Linux; Android 11; M2007J20CG Build/RKQ1.200826.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/114.0.5735.196 Mobile Safari/537.36',
         'Accept: */*',
+        'Accept-Encoding: gzip, deflate, br',
         'Connection: keep-alive',
-        'Accept-Language: en-US,en;q=0.9',
-    ]);
+        'X-Requested-With: com.loitp.ottnavigator',
+    ];
+    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 
     $content = curl_exec($ch);
     $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-    $contentType = curl_getinfo($ch, CURLINFO_CONTENT_TYPE);
-    
-    if (curl_errno($ch)) {
-        echo "[-] cURL Error: " . curl_error($ch) . "\n";
-    }
-
     curl_close($ch);
 
     if ($httpCode === 200 && !empty($content)) {
-        // Validation Logic
-        $isM3u = (stripos($content, '#EXTM3U') !== false);
-        $isXml = (stripos($content, '<?xml') !== false);
+        // Check if the content actually contains channels (#EXTINF)
+        // If it only contains #EXTM3U, it failed to get the list.
+        $hasChannels = (stripos($content, '#EXTINF') !== false);
         
-        // Prevent saving "Login Failed" or "Expired" HTML pages
-        if (($isM3u || $isXml) && strlen($content) > 200) {
+        if ($hasChannels) {
             file_put_contents($fileName, $content);
-            echo "[+] Success: Saved " . strlen($content) . " bytes to $fileName\n";
+            echo "[+] Success! Fetched " . substr_count($content, '#EXTINF') . " channels.\n";
+            echo "[+] Saved to $fileName\n";
         } else {
-            echo "[-] Error: Response received but content is not a valid Playlist/XML.\n";
-            // Debug: print first 50 chars to see what the server sent
-            echo "[Debug] Start of content: " . substr(strip_tags($content), 0, 50) . "...\n";
+            echo "[-] Error: Received Header but NO channels. The server is blocking the GitHub IP or requires a new token.\n";
+            // Check if the server sent an error message in the text
+            if (strlen($content) < 500) {
+                echo "[Debug] Server Response: " . strip_tags($content) . "\n";
+            }
         }
     } else {
-        echo "[-] Error: Failed to fetch $url (HTTP Status: $httpCode)\n";
+        echo "[-] HTTP Error: $httpCode\n";
     }
 }
-
-// Cleanup
-if (file_exists($cookieFile)) unlink($cookieFile);
 ?>
