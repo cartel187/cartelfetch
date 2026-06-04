@@ -4,7 +4,7 @@
  * Format: "Output_Filename.m3u" => "Source_URL"
  */
 $sources = [
-    "playlist.m3u"   => "https://server.lrl45.workers.dev/channel/raw?=m3u",
+    "playlist.m3u"   => "https://yowaimo.in/StreamFlexTv/master.php?name=SF9EEJVS&token=165561166922b8141128e14f",
     "secondary.m3u"  => "https://example.com/another_playlist.m3u",
     "guide.xml"      => "https://example.com/epg.xml", // Example for EPG
 ];
