@@ -734,17 +734,17 @@ https://z5ak-cmaflive.zee5.com/cmaf/live/2105494/ZEEUPUKELE/master.m3u8?hdnts=st
 
 # ------------=== ⛨ 𝔼𝕩𝕥𝕣𝕒 | SonyLiv ===---------------
 
-#EXTINF:-1 tvg-logo="https://origin-staticv2.sonyliv.com/videoasset_images/manage_file/1000019247/1780627525081941_INT_Friendlies26_Netherlands_vs_Uzbekistan_4jun_landscape_thumb.jpg" group-title="⛨ 𝔼𝕩𝕥𝕣𝕒  | SonyLiv",Netherlands vs Uzbekistan - 9 Jun 2026 [ENG]
-https://sonydaimenew.akamaized.net/hls/live/20000292/IF_NedVs0806/ENG/std_lrh-800300010.m3u8?hdnea=exp=1780986544~acl=/*~id=75018853714734848960249892570743~hmac=c9e46f1efc06094dae915b470311b3ebe6ade9f4d09cf112d75a21e802ca4505
+#EXTINF:-1 tvg-logo="https://origin-staticv2.sonyliv.com/videoasset_images/manage_file/1000019247/1780624118765941_INT_Friendlies26_France_vs_Northern_Ireland_4jun_landscape_thumb.jpg" group-title="⛨ 𝔼𝕩𝕥𝕣𝕒  | SonyLiv",France vs Northern Ireland - 9 Jun 2026 [ENG]
+https://sonydaimenew.akamaized.net/hls/live/20000293/IF_Franc0806/ENG/std_lrh-800300010.m3u8?hdnea=exp=1780995636~acl=/*~id=54811979085473236222417724778244~hmac=bf8fcbb50cde74d8906460ced38dd75dc958252d7dbf57d7b68ea3b2fd64278a
 
 # ------------=== ⛨ 𝔼𝕩𝕥𝕣𝕒 | FanCode ===---------------
 
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/143196_6110_NED_USA_fc-web.jpg" group-title="⛨ 𝔼𝕩𝕥𝕣𝕒  | FanCode",ENGLISH - Netherlands Vs Usa
 #EXTHTTP:{"Origin":"https://allinonereborn.online/fcww","Referer":"https://allinonereborn.online/fcww"}
 https://fcode.neyini4157.workers.dev/143196_english.m3u8
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/143070_6102_MWS_IPP_FC-WEB.jpg" group-title="⛨ 𝔼𝕩𝕥𝕣𝕒  | FanCode",ENGLISH - Malwa Stallions Vs Indore Pink Panthers
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/WI-vs-SL_Web-match-card.png" group-title="⛨ 𝔼𝕩𝕥𝕣𝕒  | FanCode",ENGLISH - West Indies Vs Sri Lanka
 #EXTHTTP:{"Origin":"https://allinonereborn.online/fcww","Referer":"https://allinonereborn.online/fcww"}
-https://fcode.neyini4157.workers.dev/143070_english.m3u8
+https://fcode.neyini4157.workers.dev/142974_english.m3u8
 
 # ------------=== VT OTT | CIO ===---------------
 
