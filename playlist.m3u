@@ -827,6 +827,13 @@ https://z5ak-cmaflive.zee5.com/cmaf/live/2105104/ZEESALAAMELE/master.m3u8?hdnts=
 #EXTHTTP:{"Origin":"https://www.zee5.com","Referer":"https://www.zee5.com/"}
 https://z5ak-cmaflive.zee5.com/cmaf/live/2105494/ZEEUPUKELE/master.m3u8?hdnts=st=1779075393~exp=1779078393~acl=/out/v1/ZEE5_Live_Channels/Zee-News-UttarPradesh-Uttrakhand-SD/master/*~id=66e753e1-e594-4291-8482-be43d3eeb749~data=non-ssai_66e753e1-e594-4291-8482-be43d3eeb749~hmac=48e3bfc96d574d62981cc96a4c934ebdc2b21a960ff3fb340a841e1010289969&req_id=non-ssai_66e753e1-e594-4291-8482-be43d3eeb749
 
+# ------------=== ⛨ 𝔼𝕩𝕥𝕣𝕒 | SonyLiv ===---------------
+
+#EXTINF:-1 tvg-logo="https://origin-staticv2.sonyliv.com/videoasset_images/manage_file/1000019550/1781198966873129_ArcheryWC26_Antalya_Turkiye_Compound_mixed_Team_landscape_thumb.jpg" group-title="⛨ 𝔼𝕩𝕥𝕣𝕒  | SonyLiv",Compound Mixed Team And Individual Finals - 14 Jun 2026 [ENG]
+https://sonydaimenew.akamaized.net/hls/live/20000291/Archery_1406/ENG/std_lrh-800300010.m3u8?hdnea=exp=1781481355~acl=/*~id=94187123938277888404950272957305~hmac=8bd3d8fe33554b7685ce98d7049c6680bb8ce7a69038f4d870e57e00929d6d55
+#EXTINF:-1 tvg-logo="https://origin-staticv2.sonyliv.com/videoasset_images/manage_file/1000019332/178071038987762_ASIAN_TOUR_GOLF_2026_International_Series_Morocco_day4_6jun_landscape_thumb.jpg" group-title="⛨ 𝔼𝕩𝕥𝕣𝕒  | SonyLiv",International Series Morocco - Day 4 - 14 Jun 2026 [ENG]
+https://sonydaimenew.akamaized.net/hls/live/20000301/AsianTou1406/ENG/std_lrh-800300010.m3u8?hdnea=exp=1781481355~acl=/*~id=94187123938277888404950272957305~hmac=8bd3d8fe33554b7685ce98d7049c6680bb8ce7a69038f4d870e57e00929d6d55
+
 # ------------=== ⛨ 𝔼𝕩𝕥𝕣𝕒 | FanCode ===---------------
 
 #EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Aus-vs-Ban_Web-match-card_1780908762762.png" group-title="⛨ 𝔼𝕩𝕥𝕣𝕒  | FanCode",ENGLISH - Bangladesh Vs Australia
@@ -835,12 +842,15 @@ https://fcode.neyini4157.workers.dev/142967_english.m3u8
 #EXTINF:-1 tvg-logo="https://images.fancode.com/aig/match/v1780469022377/143084_CASACARDS_SPORTY_APP.png" group-title="⛨ 𝔼𝕩𝕥𝕣𝕒  | FanCode",ENGLISH - Royal Nimar Eagles Vs Ujjain Falcons
 #EXTHTTP:{"Origin":"https://allinonereborn.online/fcww","Referer":"https://allinonereborn.online/fcww"}
 https://fcode.neyini4157.workers.dev/143084_english.m3u8
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/143031_6095_AAL_LLI_fc-app.jpg" group-title="⛨ 𝔼𝕩𝕥𝕣𝕒  | FanCode",ENGLISH - Amritsar Alligators Vs Ludhiana Lions
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/143032_6095_PPA_BBU_fc-app.jpg" group-title="⛨ 𝔼𝕩𝕥𝕣𝕒  | FanCode",ENGLISH - Patiala Panthers Vs Bathinda Bulls
 #EXTHTTP:{"Origin":"https://allinonereborn.online/fcww","Referer":"https://allinonereborn.online/fcww"}
-https://fcode.neyini4157.workers.dev/143031_english.m3u8
-#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/F2_Saudi_Old_match-card.jpg" group-title="⛨ 𝔼𝕩𝕥𝕣𝕒  | FanCode",ENGLISH - Feature Race
+https://fcode.neyini4157.workers.dev/143032_english.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/ATP-Boss_Web-match-card.png" group-title="⛨ 𝔼𝕩𝕥𝕣𝕒  | FanCode",ENGLISH - Final   Center Court
 #EXTHTTP:{"Origin":"https://allinonereborn.online/fcww","Referer":"https://allinonereborn.online/fcww"}
-https://fcode.neyini4157.workers.dev/139629_english.m3u8
+https://fcode.neyini4157.workers.dev/143124_english.m3u8
+#EXTINF:-1 tvg-logo="https://www.fancode.com/skillup-uploads/cms-media/Libema-Open,-ATP-250,-Grass-old.png" group-title="⛨ 𝔼𝕩𝕥𝕣𝕒  | FanCode",ENGLISH - Final   Center Court
+#EXTHTTP:{"Origin":"https://allinonereborn.online/fcww","Referer":"https://allinonereborn.online/fcww"}
+https://fcode.neyini4157.workers.dev/143131_english.m3u8
 
 # ------------=== VT OTT | DTV ===---------------
 
